@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.felipepolo.pruebaenvivo">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name=".TodoApplication"
         android:allowBackup="true"

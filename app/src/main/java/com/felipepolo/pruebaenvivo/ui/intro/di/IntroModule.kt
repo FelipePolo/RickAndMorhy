@@ -1,17 +1,20 @@
-package com.felipepolo.pruebaenvivo.ui.login.di
+package com.felipepolo.pruebaenvivo.ui.intro.di
 
 import androidx.lifecycle.ViewModel
 import com.felipepolo.pruebaenvivo.di.ViewModelKey
+import com.felipepolo.pruebaenvivo.ui.intro.IntroVM
 import com.felipepolo.pruebaenvivo.ui.login.LoginVM
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
 
-@Module(subcomponents = [])
-abstract class LoginModule {
+
+@Module
+abstract class IntroModule {
 
     @Binds
     @IntoMap
-    @ViewModelKey(LoginVM::class)
-    abstract fun bindsLoginViewModel(viewModel: LoginVM): ViewModel
+    @ViewModelKey(IntroVM::class)
+    abstract fun bindsIntroViewModel(viewModel: IntroVM): ViewModel
+
 }

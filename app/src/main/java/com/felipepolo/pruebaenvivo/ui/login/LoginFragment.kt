@@ -52,8 +52,7 @@ class LoginFragment : DaggerFragment() {
                     // show some thing loading
                 }
                 is Result.Success -> {
-                    // navigate to te main list
-                    Log.d("debug", "setupObservers: Usuario Logeado correctamente")
+                    navController.navigate(R.id.action_loginFragment_to_homeFragment)
                 }
                 is Result.Failure -> {
                     requireContext().showErrorToast(result.exception.message!!)

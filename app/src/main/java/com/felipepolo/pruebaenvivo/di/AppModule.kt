@@ -7,18 +7,14 @@ import com.apollographql.apollo.ApolloClient
 import com.felipepolo.pruebaenvivo.AppConstants.BASE_RICK_AND_MORTHY_URL
 import com.felipepolo.pruebaenvivo.AppConstants.DATA_BASE_NAME
 import com.felipepolo.pruebaenvivo.data.local.AppDataBase
-import com.felipepolo.pruebaenvivo.data.local.models.ExampleDao
-import com.felipepolo.pruebaenvivo.data.remote.ExampleWebService
+import com.felipepolo.pruebaenvivo.data.local.CharactersDao
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import com.squareup.okhttp.OkHttpClient
 import dagger.Module
 import dagger.Provides
-import okhttp3.logging.HttpLoggingInterceptor
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import java.lang.Exception
 import javax.inject.Singleton
 
 @Module
@@ -29,7 +25,6 @@ class AppModule {
     fun provideApplicationContext(app: Application): Context {
         return app.applicationContext
     }
-
 
     @Singleton
     @Provides
@@ -42,23 +37,14 @@ class AppModule {
 
     @Singleton
     @Provides
-    fun provideFireBaseOauth(): FirebaseAuth {
+    fun provideFireBaseauth(): FirebaseAuth {
         return Firebase.auth
     }
 
     @Singleton
     @Provides
-    fun provideRetrofit(): Retrofit {
-        return Retrofit.Builder()
-            .baseUrl("https://SomeBaseurl/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-    }
-
-    @Provides
-    @Singleton
-    fun provideExampleWebService(retrofit: Retrofit): ExampleWebService {
-        return retrofit.create(ExampleWebService::class.java)
+    fun provideFireStore(): FirebaseFirestore {
+        return Firebase.firestore
     }
 
     @Provides
@@ -69,8 +55,8 @@ class AppModule {
 
     @Provides
     @Singleton
-    fun provideExampleDao(appDataBase: AppDataBase): ExampleDao {
-        return appDataBase.exampleDao()
+    fun provideCharacterDao(appDataBase: AppDataBase): CharactersDao {
+        return appDataBase.charactersDao()
     }
 }
 

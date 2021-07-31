@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="Favorites"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/swFavorite"
+        android:visibility="visible"
+        app:actionLayout="@layout/switch_item"
+        app:actionViewClass="android.widget.Switch"
+        app:showAsAction="ifRoom"
+        tools:visibility="visible"
+        android:title="TODO" ></item>
+    <item
+        android:id="@+id/btLogOut"
+        android:icon="@drawable/ic_logout"
+        android:title="Log Out"
+        app:showAsAction="always" />
+</menu>
