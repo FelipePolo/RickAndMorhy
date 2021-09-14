@@ -13,9 +13,9 @@ This application was created with the mvvm architectural pattern, using librarie
 </p>
 
 <p align="center">
-  <img src="https://github.com/FelipePolo/RickAndMorhy/Preview/1.png" width="350" title="hover text">
-  <img src="https://github.com/FelipePolo/RickAndMorhy/Preview/2.png" width="350" title="hover text">
-  <img src="https://github.com/FelipePolo/RickAndMorhy/Preview/3.png" width="350" title="hover text">
-  <img src="https://github.com/FelipePolo/RickAndMorhy/Preview/4.jpg" width="350" title="hover text">
-  <img src="https://github.com/FelipePolo/RickAndMorhy/Preview/5.jpg" width="350" title="hover text">
+  <img src="https://github.com/FelipePolo/RickAndMorhy/blob/main/Preview/1.png" width="350" title="hover text">
+  <img src="https://github.com/FelipePolo/RickAndMorhy/blob/main/Preview/2.png" width="350" title="hover text">
+  <img src="https://github.com/FelipePolo/RickAndMorhy/blob/main/Preview/3.png" width="350" title="hover text">
+  <img src="https://github.com/FelipePolo/RickAndMorhy/blob/main/Preview/4.jpg" width="350" title="hover text">
+  <img src="https://github.com/FelipePolo/RickAndMorhy/blob/main/Preview/5.jpg" width="350" title="hover text">
 </p>
